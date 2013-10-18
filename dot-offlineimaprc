@@ -1,0 +1,43 @@
+# Sample minimal config file.  Copy this to ~/.offlineimaprc and edit to
+# get started fast.
+
+[general]
+accounts = gmail
+maxsyncaccounts = 1
+socktimeout = 60
+
+# ui = Curses.Blinkenlights
+
+[Account gmail]
+localrepository = gmail_local
+remoterepository = gmail_remote
+
+[Repository gmail_local]
+type = Maildir
+localfolders = ~/Mail/gmail
+
+[Repository gmail_remote]
+type = Gmail       
+ssl = yes
+# remotehost = imap.gmail.com
+# remoteport = 993
+maxconnections = 1
+holdconnectionopen = no
+keepalive = 120
+realdelete = no          
+remoteuser = your_user_name@gmail.com
+# remotepass = <leave this commented and it will prompt you>
+nametrans = lambda foldername: re.sub ('^\[gmail\]', 'bak',
+                               re.sub ('sent_mail', 'sent',
+                               re.sub ('starred', 'flagged',
+                               re.sub (' ', '_', foldername.lower()))))
+folderfilter = lambda foldername: foldername not in '[Gmail]/All Mail'
+sslcacertfile = /etc/ssl/certs/ca-certificates.crt
+
+# [mbnames]                         
+# enabled = yes
+# filename = ~/.mutt/mailboxes
+# header = "mailboxes "
+# peritem = "+%(accountname)s/%(foldername)s"
+# sep = " "
+# footer = "\n" 
