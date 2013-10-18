@@ -54,10 +54,9 @@ Skip this if you simply install globally, or have everything already.
 #### Install mongodb (I'd suggest trying docker)
 You can:
 
-1. Edit the code to point at an existing mongodb server
-2. Install mongodb some 'normal' way
-3. The new and cool happy hipster hacker way for kernel 3.8 or newer
-
+* Edit the code to point at an existing mongodb server
+* Install mongodb some 'normal' way
+* The new and cool happy hipster hacker way for kernel 3.8 or newer:
 
     $ sudo -i
     $ cd /opt && mkdir docker && cd docker
@@ -65,7 +64,6 @@ You can:
     $ chmod +x docker
     $ sudo ./docker -d &
     $ ./docker run -d -p :27017 rgarcia/mongodb mongod --noprealloc --smallfiles --nojournal 
-
 
 It will take a few minutes to download the docker image the first time,
 but subsequent runs will be very snappy.  When done, you can clean up
