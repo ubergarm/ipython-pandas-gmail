@@ -86,12 +86,12 @@ CSV file instead of bothering with the mongodb, but I wanted to learn stuff.
 It could also probably be more clever about how it extracts data, as there
 is probably already some tool to parse this e-mail format into JSON or similar.  
 
-Also, once could directly extract a datetime object and stick the it into
-mongodb with that nifty BSON capability, but I do the conversion later in
-pandas.
+While one could directly extract a datetime object and stick it into
+mongodb with that nifty BSON capability, I forego converting until everything
+is in pandas.
 
-Finally, I apologize, I haven't installed pyflakes or various linting things to
-beat me up every time I safe until I develop a better programming style.  
+Finally, I apologize, I haven't installed pyflakes or various linting things 
+that automatically beat me up every time I save with not very PEPpy code.
 
 Fields currently extracted:
 
