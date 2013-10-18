@@ -101,7 +101,10 @@ Fields currently extracted:
 
 #### Ipython Notebook Fun:
 When you run the command `ipython notebook` it should pop open your browser
-pointing to localhost:8888.  There you can create a New Notebook.
+pointing to localhost:8888.  There you can create a New Notebook or import
+myGmail.ipynb and `Cell -> Run All` to check out data crunching and graphs.
+
+Feel the power!
 
 #### References:
 * [virtualenv](https://pypi.python.org/pypi/virtualenv)
