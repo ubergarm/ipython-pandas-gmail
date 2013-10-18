@@ -58,15 +58,12 @@ You can:
 2. Install mongodb some *normal* way
 3. The new and cool happy hipster hacker way for kernel 3.8 or newer:
 
-    $
-    $ sudo -i
-    $ cd /opt && mkdir docker && cd docker
-    $ wget --output-document=docker https://get.docker.io/builds/Linux/x86_64/docker-latest
-    $ chmod +x docker
-    $ sudo ./docker -d &
-    $ ./docker run -d -p :27017 rgarcia/mongodb mongod --noprealloc --smallfiles --nojournal 
-    $
-    
+`$ sudo -i`
+`$ cd /opt && mkdir docker && cd docker`
+`$ wget --output-document=docker https://get.docker.io/builds/Linux/x86_64/docker-latest`
+`$ chmod +x docker`
+`$ sudo ./docker -d &`
+`$ ./docker run -d -p :27017 rgarcia/mongodb mongod --noprealloc --smallfiles --nojournal`
 
 It will take a few minutes to download the docker image the first time,
 but subsequent runs will be very snappy.  When done, you can clean up
