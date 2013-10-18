@@ -7,9 +7,10 @@ direction.  Happy Hacking!
 
 #### Prerequisite Gmail settings:
 
-* Click the little gear drop down in the top right corner.
-* Click on the 'Forwarding and POP/IMAP' tab.
-* IMAP Access: then Enable IMAP.
+* Log into your Gmail account
+* Click the little gear drop down in the top right corner
+* Click on the 'Forwarding and POP/IMAP' tab
+* IMAP Access: then Enable IMAP
 * The default values seem to work fine
 * Save Changes
 
@@ -52,9 +53,10 @@ Skip this if you simply install globally, or have everything already.
 
 #### Install mongodb (I'd suggest trying docker)
 You can:
+
 1. Edit the code to point at an existing mongodb server
-1. Install mongodb some 'normal' way
-1. The new and cool happy hipster hacker way (if you have Linux Kernel >=3.8):
+2. Install mongodb some 'normal' way
+3. The new and cool happy hipster hacker way (if you have Linux Kernel >=3.8):
 
     $ sudo -i
     $ cd /opt && mkdir docker && cd docker
@@ -72,7 +74,7 @@ by doing:
 
 This docker is a beast unto itself.  Check out the links below for more info.
 
-#### Convert downloaded IMAP box files into mongodb
+#### Convert downloaded IMAP files into mongodb
 Take a look at imap2json.py.  It takes less than a minute to process 1.5gb
 of raw imap e-mail files.  It isn't coded very defensively and I've not tested
 it on other e-mail sources or files except my own setup.  It does drop the
@@ -92,8 +94,11 @@ Finally, I apologize, I haven't installed pyflakes or various linting things to
 beat me up every time I safe until I develop a better programming style.  
 
 Fields currently extracted:
+
 * 'Date:'
 * 'From: Joe Bob <name@host>'
+
+Usage:
 
     $ cd ~/projects/ipython-pandas-gmail
     $ chmod a+x ./imap2json.py
