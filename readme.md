@@ -56,7 +56,7 @@ You can:
 
 1. Edit the code to point at an existing mongodb server
 2. Install mongodb some 'normal' way
-3. The new and cool happy hipster hacker way (if you have Linux Kernel >=3.8):
+3. The new and cool happy hipster hacker way (if you have Linux Kernel 3.8+)
 
     $ sudo -i
     $ cd /opt && mkdir docker && cd docker
